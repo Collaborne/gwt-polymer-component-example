@@ -1,0 +1,44 @@
+<link rel="import" href="https://rawgit.com/Polymer/polymer/master/polymer.html">
+
+<script type="text/javascript" src="hello/hello.nocache.js"></script>
+
+<dom-module id="collaborne-hello-world">
+
+	<template>
+		<span>[[greeting]]</span>
+	</template>
+
+</dom-module>
+
+<script>
+function onGwtReady() {
+
+	Polymer({
+		is: 'collaborne-hello-world',
+		
+		properties: {
+			name: {
+				type: String,
+				observer: '_updateGreeting'
+			},
+			
+			presenter: Object
+		},
+		
+		ready: function() {
+			this.presenter = new com.collaborne.hello.client.HelloWorldPresenter();
+
+			this._updateGreeting();
+		},
+		
+		_updateGreeting: function() {
+			if (this.presenter) {
+				this.innerText = this.presenter.sayHello(this.name);
+			}
+		}
+
+	});
+
+}
+
+</script>

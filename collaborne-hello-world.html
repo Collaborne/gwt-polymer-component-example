@@ -2,22 +2,24 @@
 
 <dom-module id="collaborne-hello-world">
 
-  <template>
-    <span>[[name]]</span>, Hello world!
-  </template>
-
-  <script>
-
-    Polymer({
-
-      is: 'collaborne-hello-world',
-
-      properties: {
-    	  name: String
-      }
-
-    });
-
-  </script>
+	<template>
+		<span>[[name]]</span>, Hello world!
+	</template>
 
 </dom-module>
+
+<script>
+
+(function() {
+
+	Polymer({
+		is: 'collaborne-hello-world',
+		
+		properties: {
+			name: String
+		}
+	});
+
+})();
+
+</script>

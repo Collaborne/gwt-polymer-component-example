@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+
+  <title>collaborne-hello-world</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../bower_components/web-component-tester/browser.js"></script>
+
+  <link rel="import" href="../collaborne-hello-world.html">
+
+</head>
+<body>
+
+  <test-fixture id="TrivialName">
+    <template>
+      <collaborne-hello-world name='Joe'></collaborne-hello-world>
+    </template>
+  </test-fixture>
+
+  <script>
+suite('<collaborne-hello-world>', function() {
+  suite('basic behavior', function() {
+    var hello;
+
+    setup(function() {
+      hello = fixture('TrivialName');
+    });
+
+    test('can be assigned a name with the name attribute', function() {
+      expect(hello).to.be.ok;
+      expect(hello.innerText).to.match('Joe, Hello world!');
+    });
+  });
+});
+  </script>
+
+</body>
+</html>

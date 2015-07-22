@@ -1,0 +1,28 @@
+{
+  "name": "collaborne-hello-world",
+  "private": true,
+  "version": "1.0.0",
+  "license": "https://github.com/Collaborne/gwt-polymer-component-example/LICENSE.txt",
+  "description": "Example Poylmer component created with GWT",
+  "main": "collaborne-hello-world.html",
+  "author": [
+    "Collaborne"
+  ],
+  "keywords": [
+    "web-components",
+    "polymer",
+    "gwt",
+    "example"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Collaborne/gwt-polymer-component-example.git"
+  },
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  },
+  "devDependencies": {
+    "web-component-tester": "*",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  }
+}
